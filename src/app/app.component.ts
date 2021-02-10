@@ -52,7 +52,7 @@ export class AppComponent implements OnInit {
     this.forecastService.getForecastById(checkWeather).subscribe(
       (response: Forecast) => {
         console.log(response);
-        this.getForecast();
+        this.forecast = response;
       },
       (error: HttpErrorResponse) => {
         alert(error.message + "jestem w onCheckWeather");
