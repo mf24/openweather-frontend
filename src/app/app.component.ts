@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
         this.forecast = response;
       },
       (error: HttpErrorResponse) => {
-        alert(error.message + "jestem w onCheckWeather");
+        alert(error.message + "error while receiving data from backend service");
       }
     );
   }
